@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extinction des Dinosaures - Collège</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/Logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-top me-2">
+                <span class="brand-text">DinoExtinction</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="causes.html">Les Causes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">Quiz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="display-4 text-primary mb-4 animate__animated animate__fadeIn">L'Extinction des Dinosaures</h1>
+                <div class="card mb-4 shadow-sm animate__animated animate__fadeInUp">
+                    <div class="card-body">
+                        <p class="lead">Il y a 66 millions d'années, 75% des espèces dont les dinosaures non-aviens disparaissaient lors de l'extinction Crétacé-Paléogène. Ce processus a duré quelques milliers d'années.</p>
+                        <div class="alert alert-info mt-3">
+                            <strong>Pour le quiz :</strong> Toutes les réponses se trouvent dans les différentes sections du site !
+                        </div>
+                    </div>
+                </div>
+
+                <section class="mb-5">
+                    <h2 class="text-success mb-3">Le savais-tu ?</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-success">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pas tous disparus !</h5>
+                                    <img src="assets/images/Trex-Image.jpg" class="img-fluid rounded mb-3" alt="T-Rex" style="max-height: 200px;">
+                                    <p class="card-text">Les oiseaux sont les descendants directs des dinosaures théropodes comme le T-Rex !</p>
+                                    <button class="btn btn-primary mt-2" onclick="new Audio('assets/sounds/T-rex-roar.mp3').play()">
+                                        <i class="bi bi-volume-up me-2"></i> Écouter le T-Rex
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-success">
+                                <div class="card-body">
+                                    <h5 class="card-title">Un impact colossal</h5>
+                                    <p class="card-text">L'astéroïde qui a frappé la Terre faisait environ 10 km de diamètre - la taille de Paris !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">Timeline Interactive</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="timeline" class="timeline-container">
+                            <!-- Timeline sera générée en JS -->
+                        </div>
+                        <button id="playTimeline" class="btn btn-primary mt-3">Démarrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 Projet pédagogique - Collège</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP pour animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
